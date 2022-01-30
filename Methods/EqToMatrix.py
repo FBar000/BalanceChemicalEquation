@@ -1,5 +1,5 @@
-import BCEClasses
-import BCEConstants
+import DataStruct
+import DataStruct
 
 
 
@@ -190,7 +190,7 @@ def findDistinctInstances(element, term):
 
         hi = lo + len(element) - 1
 
-        tmp = BCEClasses.Unit(lo, hi)
+        tmp = DataStruct.Unit(lo, hi)
         result.append(tmp)
 
     return result
@@ -211,7 +211,7 @@ def count(thing, term):
 
     gp = group(thing, term)
 
-    if gp != BCEConstants.NULL_UNIT:
+    if gp != DataStruct.NULL_UNIT:
         ct *= count(gp, term)
 
     return ct
@@ -266,6 +266,6 @@ def group(thing, term):
 
     # Package results in new (unit) object
     if (new_lo == -1 or new_hi == -1):
-        return BCEConstants.NULL_UNIT
+        return DataStruct.NULL_UNIT
 
-    return BCEClasses.Unit(new_lo, new_hi)
+    return DataStruct.Unit(new_lo, new_hi)
