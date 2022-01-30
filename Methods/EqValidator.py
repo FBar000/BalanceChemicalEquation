@@ -5,7 +5,6 @@ def validate(equation):
 
     for x in BCEConstants.UNACCEPT:
         if chr(x) in equation:
-            print(x)
-            return False
+            return False, x
 
-    return True
+    return True, 256

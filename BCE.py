@@ -11,27 +11,24 @@ import Methods.MatrixSolver
 import Methods.SolutionExtracter
 import Methods.EqValidator
 
+def BCE(equation):
+
+    ctup = Methods.EqValidator.validate(equation)
+
+    if ctup[0]:
+        
+        
+        matrix = Methods.EqToMatrix.equationToMatrix(equation)   
+        pmatrix = Methods.MatrixSolver.rowEchelonMatrix(matrix)
+        lineup = Methods.SolutionExtracter.lineUp(pmatrix)
+        solution = Methods.SolutionExtracter.primeSolution(lineup)
+        
+        return solution
+
+    else:
+        print("Illegal character detected")        
+        return -1, ctup[1]
+
 equation = input("Input your chemical equation: ")
-
-if Methods.EqValidator.validate(equation):
-    
-    
-    matrix = Methods.EqToMatrix.equationToMatrix(equation)
-    print(matrix)
-    
-    
-    pmatrix = Methods.MatrixSolver.rowEchelonMatrix(matrix)
-    print(pmatrix)
-    
-    lineup = Methods.SolutionExtracter.lineUp(pmatrix)
-    solution = Methods.SolutionExtracter.primeSolution(lineup)
-    print(lineup)
-    
-    balanced_equation = Methods.EqToMatrix.wrapSolution(solution)
-    print(solution)
-    print(balanced_equation)
-
-else:
-    print("Illegal character detected")
-
+print(Methods.EqToMatrix.wrapSolution(BCE(equation)))
 A = input("Press Key to Exit")
