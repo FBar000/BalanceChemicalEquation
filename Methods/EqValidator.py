@@ -1,9 +1,9 @@
-import BCEConstants
+import DataStruct
 
 
 def validate(equation):
 
-    for x in BCEConstants.UNACCEPT:
+    for x in DataStruct.UNACCEPT:
         if chr(x) in equation:
             return False, x
 
