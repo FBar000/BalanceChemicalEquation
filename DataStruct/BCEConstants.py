@@ -1,7 +1,7 @@
-import BCEClasses
+import DataStruct
 
 #Null Unit: A unit that doesn't exist in a string is assigned to this
-NULL_UNIT = BCEClasses.Unit(-1, -1)
+NULL_UNIT = DataStruct.Unit(-1, -1)
 
 
 #UnAccept list of int(chars) for unacceptable chars into the eq
