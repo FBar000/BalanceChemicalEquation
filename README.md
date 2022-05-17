@@ -15,8 +15,8 @@ Ensures a legal input
 
 MatrixToEq:
 
-Houses the method that converts the original string into a matrix
-Houses the method that convers the solution into a string
+Houses the method that converts the original string into a matrix \n
+Houses the method that converts the solution into a string
 
 MatrixOperations:
 
