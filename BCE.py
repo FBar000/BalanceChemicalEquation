@@ -1,23 +1,15 @@
-'''
-
-DESCRIPTOR CONVENTION
-# [Status]
-# [Method Description]
-# [IN_TYPE / OUT_TYPE]
-'''
-
 import Methods.EqToMatrix
 import Methods.MatrixSolver
 import Methods.SolutionExtracter
 import Methods.EqValidator
 
+# Takes unbalanced chemical equation as a string, returns balanced chemical equation as a string
 def BCE(equation):
-
+    
+    # Tuple: boolean representing validity, first illegal character detected in equation 
     ctup = Methods.EqValidator.validate(equation)
 
     if ctup[0]:
-        
-        
         matrix = Methods.EqToMatrix.equationToMatrix(equation)   
         pmatrix = Methods.MatrixSolver.rowEchelonMatrix(matrix)
         lineup = Methods.SolutionExtracter.lineUp(pmatrix)
