@@ -2,13 +2,12 @@ import DataStruct
 
 
 
-#Return a list of lists with the coefficients of each unknown, given the equation as a string
+# Return a list of lists with the coefficients of each unknown, given the equation as a string
 # IN: String / OUT: 2d list
 def equationToMatrix(equation):
 
     # matrix to be returned
     result = []
-
 
     # Hold each term of the equation. RHS specified with *
     term_array = findDistinctTerms(equation)
@@ -48,9 +47,7 @@ def equationToMatrix(equation):
 
     return result
 
-
-# TODO
-# IN: dict / OUT: String
+# IN: Dict / OUT: String
 def wrapSolution(solution):
 
     bal_eq = ""
@@ -99,7 +96,7 @@ def wrapSolution(solution):
     return bal_eq
 
 
-# Functional
+
 # Record distinct atoms in the equation
 # IN: String / OUT: 1d string list
 def findDistinctElements(equation):
@@ -131,7 +128,7 @@ def findDistinctElements(equation):
     return atoms
 
 
-# Functional
+
 # Record distinct terms in the equation, specify RHS with *
 # IN: String / OUT: 1d string list
 def findDistinctTerms(equation):
@@ -216,7 +213,7 @@ def count(thing, term):
     return ct
 
 
-# Functional
+
 # Return the unit a given unit is in. NULL_UNIT if there is no super unit
 # IN: Unit / Out: Unit
 def group(thing, term):
