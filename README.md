@@ -36,7 +36,6 @@ The methods used in the main file are stored in the `Methods` folder.
 
 The classes and constants used in the main file are stored in the `DataStruct` folder. 
 
-Comment 6/12/2022: Since developing this code, I've learned of better approaches to managing data strutures. Were I to do this project again, I would create a matrix class in this folder.
 
 ### BCEClasses / Unit
 
