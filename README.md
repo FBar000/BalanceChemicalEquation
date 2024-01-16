@@ -11,7 +11,7 @@ The methods used in the main file are stored in the `Methods` folder.
 
 ### EqValidator:
 
-* Ensures a legal input
+* Ensures a valid input
 
 ### MatrixToEq:
 
